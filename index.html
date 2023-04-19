@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meeting Minutes for CSE 110</title>
     <link rel="shortcut icon" type="image/png" href="favicon-32x32.png">
+    <link rel="stylesheet" href="extstyle.css">
+    <!-- universal formatting -->
+    <style>
+        body {
+            position: static;
+            background-color: hsl(0, 0%, 15%);
+            color:hsl(0, 0%, 95%);
+            font-family: cursive;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div>Sections:</div>
@@ -40,7 +51,7 @@
         <!--attendance list-->
         <section>
             <h3 id="Attendance">Attendance</h3>
-            <fieldset disabled>
+            <fieldset disabled id = "Team">
                 <legend>Attendees</legend>
             
                 <input type="checkbox" id="TeamLead1" name = "present" checked>
@@ -48,7 +59,8 @@
                 <br>
             
                 <input type="checkbox" id="TeamLead2" name = "present">
-                <label for="TeamLead2">Harrison Richard</label>
+                <label for="TeamLead2" style="color: red;">
+                    Harrison Richard</label>
                 <br>
             
                 <input type="checkbox" id="Designer" name = "present" checked>
@@ -60,7 +72,8 @@
                 <br>
             
                 <input type="checkbox" id="Developer2" name = "present">
-                <label for="Developer2">Patrick Star</label>
+                <label for="Developer2" style="color: red;">
+                    Patrick Star</label>
                 <br>
             
                 <input type="checkbox" id="Developer3" name = "present" checked>
@@ -80,7 +93,7 @@
         <!--agenda of what the meeting will cover-->
         <section>
             <h3 id="Agenda">Agenda</h3>
-            <p>
+            <p class="text">
                 <!--b,strong,i,em-->
                 Today's Mission: <b>Brainstorming</b> for
                 <span>Magic 8 Ball Project</span>. The objective is to generate
@@ -97,7 +110,7 @@
         <!--things that were unfinished business from last meeting-->
         <section>
             <h3 id="PriorMeetingDetails">Prior Meeting Details</h3>
-            <p>
+            <p class="text">
                 <!--b,strong,i-->
                 Last Meeting's Mission: <b>Delegation</b> of roles for <span>
                 Magic 8 Ball Project</span>, <b>Establish</b> team culture
@@ -114,7 +127,7 @@
         <!--things that are new business that need to be talked about-->
         <section>
             <h3 id="CurrentMeetingDetails">Current Meeting Details</h3>
-            <p>
+            <p class="text">
                 Assigning members that were not able to make it last meeting.
             </p>
         </section>
@@ -126,9 +139,9 @@
                 Comments, Questions, Concerns</h3>
             <ul>
                 <!--b,strong,em,br-->
-                <li>What if my partner and I do not get along?
+                <li class>What if my partner and I do not get along?
                     <br>
-                    <span><b>ANSWER:</b> <em>Notify your partner</em> of the
+                    <span class="ans"><b>ANSWER:</b> <em>Notify your partner</em> of the
                     current dynamic between you two and attempt to
                     <em>brainstorm solutions and causes</em> that led
                     to the situation. If this is not possible
@@ -145,7 +158,7 @@
                 <li>What will be our time expectations?
                     I tend to be very busy.
                     <br>
-                    <span><b>ANSWER:</b> <em>Unfortunately, we do not know</em>.
+                    <span class="ans"><b>ANSWER:</b> <em>Unfortunately, we do not know</em>.
                     This project, as all project typically are, has a great deal
                     of <b>uncertainty</b>.</span>
                     <br>
@@ -154,7 +167,7 @@
 
                 <li>"I look forward to working with you all!" -Patrick Star
                     <br>
-                    <span>"Hope we have a great time! :&#41;" -team leads</span>
+                    <span class="ans">"Hope we have a great time! :&#41;" -team leads</span>
                     <br>
                     <br>
                 </li>
@@ -238,6 +251,7 @@
         </datalist>
         <br>
         <br>
+        <p class="hidden">EASTER EGG</p>
     </footer>
 </body>
 </html>
