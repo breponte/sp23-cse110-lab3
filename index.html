@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="extstyle.css">
     <!-- universal formatting -->
     <style>
-        body {
+        * {
             position: static;
             background-color: hsl(0, 0%, 15%);
             color:hsl(0, 0%, 95%);
-            font-family: cursive;
+            font-family: myFont;
         }
     </style>
 </head>
@@ -91,7 +91,7 @@
         </section>
 
         <!--agenda of what the meeting will cover-->
-        <section>
+        <section class="agenda">
             <h3 id="Agenda">Agenda</h3>
             <p class="text">
                 <!--b,strong,i,em-->
@@ -108,7 +108,7 @@
         </section>
 
         <!--things that were unfinished business from last meeting-->
-        <section>
+        <section class="agenda">
             <h3 id="PriorMeetingDetails">Prior Meeting Details</h3>
             <p class="text">
                 <!--b,strong,i-->
@@ -125,7 +125,7 @@
         </section>
 
         <!--things that are new business that need to be talked about-->
-        <section>
+        <section class="agenda">
             <h3 id="CurrentMeetingDetails">Current Meeting Details</h3>
             <p class="text">
                 Assigning members that were not able to make it last meeting.
@@ -139,7 +139,7 @@
                 Comments, Questions, Concerns</h3>
             <ul>
                 <!--b,strong,em,br-->
-                <li class>What if my partner and I do not get along?
+                <li class="question">What if my partner and I do not get along?
                     <br>
                     <span class="ans"><b>ANSWER:</b> <em>Notify your partner</em> of the
                     current dynamic between you two and attempt to
@@ -155,7 +155,7 @@
                     <br>
                 </li>
 
-                <li>What will be our time expectations?
+                <li class="question">What will be our time expectations?
                     I tend to be very busy.
                     <br>
                     <span class="ans"><b>ANSWER:</b> <em>Unfortunately, we do not know</em>.
@@ -165,7 +165,7 @@
                     <br>
                 </li>
 
-                <li>"I look forward to working with you all!" -Patrick Star
+                <li class="question">"I look forward to working with you all!" -Patrick Star
                     <br>
                     <span class="ans">"Hope we have a great time! :&#41;" -team leads</span>
                     <br>

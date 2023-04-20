@@ -1,10 +1,14 @@
+/* custom font */
 @font-face {
-    font-family: "myFont";
-    src: url(".\NovaOval-Regular.ttf");
+    font-family: 'myFont';
+    src: url('./NovaOval-Regular.ttf');
 }
 
-html {
-    font-family: "myFont", "Bitstream Vera Serif", serif;
+/* smaller screens should turn aquamarine */
+@media all and (max-width: 500px) {
+    body {
+        background-color: aquamarine;
+    }
 }
 
 /* span formatting, used for project goals */
@@ -12,6 +16,7 @@ span {
     color: red;
 }
 
+/* nav formatting */
 nav {
     width: auto;
     height: auto;
@@ -19,14 +24,17 @@ nav {
     max-height: 100vh;
 }
 
-.ans {
-    font-size: small;
+/* format bullet points of nav */
+ol li {
+    list-style-type: square;
 }
 
+/* recolor nav links for contrast readability from background */
 a[href^="#"] {
     color: rgb(136, 136, 255);
 }
 
+/* general heading format */
 h1,h2,h3 {
     border-style: groove;
     border-color: rgba(132, 0, 255, 0.584);
@@ -44,6 +52,12 @@ h1 {
     margin-bottom: 0px;
     margin-right: 100px;
     text-align: center;
+}
+
+/* format sections following header 1 */
+h1 ~ section {
+    background-color: rgb(50, 5, 44);
+    margin: auto;
 }
 
 /* heading 2,3 formatting */
@@ -64,21 +78,62 @@ h2, h3 {
     padding-bottom: 1.5em;
 }
 
-p.text {
+/* group all agenda sections */
+section.agenda {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    column-gap: 20px;
+}
+
+/* style agenda text */
+section > p {
+    border-style: inset;
+    border-color: rgba(211, 162, 255, 0.584);
+    border-width: 2mm;
+}
+
+/* answers to questions are smaller */
+.ans {
+    font-size: small;
+}
+
+/* format questions section */
+.question {
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto [col-start]);
+    gap: 10px;
+    place-items: center stretch;
+}
+
+/* format paragraphs directly following header 3 */
+h3 + p {
     color: pink;
     font-family: 'Times New Roman';
     display: inline-block;
 }
 
+section ~ details {
+    color:rgba(132, 0, 255, 0.584);
+}
+
+/* format placeholder text */
 :placeholder-shown {
-    font-family: 'myFont';
+    font-family:Arial, Helvetica, sans-serif;
     color: gray;
 }
 
+/* easter egg */
 .hidden {
     display: none;
 }
 
+/* enlarge button when hover */
+button:hover {
+    font-size: 2em;
+}
+
+/* footer throughout webpage */
 footer {
     position: sticky;
     bottom: -150px;
